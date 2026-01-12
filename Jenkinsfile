@@ -6,6 +6,18 @@ pipeline {
                 echo 'Hello Jenkins!' // Prints a message to the console output
             }
         }
+        stage('Hi') {
+            steps {
+                echo 'Hi Jenkins!' // Prints a message to the console output
+            }
+        stage('bye') {
+            steps {
+                echo 'bye Jenkins!' // Prints a message to the console output
+            }
+        stage('bye') {
+            steps {
+                echo 'bye Jenkins!' // Prints a message to the console output
+            }
     }
 }
 
