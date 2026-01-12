@@ -16,7 +16,7 @@ pipeline {
                 echo 'bye Jenkins!' // Prints a message to the console output
             }
 	}
-        stage('bye') {
+        stage('bye again') {
             steps {
                 echo 'bye Jenkins!' // Prints a message to the console output
            		 }
