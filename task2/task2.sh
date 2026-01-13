@@ -1,5 +1,3 @@
-#find the logs greater than 14 days in /var/log and delete them without deleting the recent log
-
 #!/bin/bash
 
 find /var/log -type f -mtime +14 -print
