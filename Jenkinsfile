@@ -3,14 +3,15 @@ pipeline {
     stages {
         stage('build') {
             steps {
-		sh 'cd task3'	
+		dir('task3'){	
 		sh 'shc -vrf task3.sh task3'
                 echo 'Hello Jenkins!' // Prints a message to the console output
             }
+          }
         }
         stage('deploy') {
             steps {
-		archiveArtifacts artifacts:"task3/bin/task3", fingerprint:true
+		archiveArtifacts artifacts:"task3/task3", fingerprint:true
                 echo 'bye Jenkins!' // Prints a message to the console output
         	    }
 		}
