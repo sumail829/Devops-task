@@ -3,6 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {	
+		sh 'cd task3'
+		sh 'mkdir bin'
 		sh 'shc -vrf task3.sh bin/task3'
                 echo 'Hello Jenkins!' // Prints a message to the console output
             }
