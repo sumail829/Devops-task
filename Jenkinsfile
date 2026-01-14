@@ -14,7 +14,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-		archiveArtifacts artifacts:"bin/task3", fingerprint:true
+		archiveArtifacts artifacts:"task3/bin/task3", fingerprint:true
                 echo 'bye Jenkins!' // Prints a message to the console output
         	    }
 		}
