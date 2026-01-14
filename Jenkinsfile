@@ -14,6 +14,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
+      sh 'pwd && ls -R .'
 		archiveArtifacts artifacts:"task3/bin/task3", fingerprint:true
                 echo 'bye Jenkins!' // Prints a message to the console output
         	    }
