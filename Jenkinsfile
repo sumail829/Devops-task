@@ -1,25 +1,23 @@
 pipeline {
     agent any // Specifies that the pipeline can run on any available agent
     stages {
-        stage('Hello') {
+        stage('build') {
             steps {
+		sh 'make build'
                 echo 'Hello Jenkins!' // Prints a message to the console output
             }
         }
-        stage('Hi') {
+        stage('test') {
             steps {
+		sh 'make test'
                 echo 'Hi Jenkins!' // Prints a message to the console output
             }
 	}
-        stage('bye') {
+        stage('deploy') {
             steps {
+		archiveArtifacts artifacts:"task3", fingerprint:true
                 echo 'bye Jenkins!' // Prints a message to the console output
-            }
-	}
-        stage('bye again') {
-            steps {
-                echo 'bye Jenkins!' // Prints a message to the console output
-           		 }
-   		 }
+        	    }
+		}
 	 }
    }
