@@ -5,7 +5,7 @@ pipeline {
             steps {	
 		sh 'cd task3'
 		sh 'mkdir bin'
-		sh 'shc -vrf task3.sh bin/task3'
+		sh 'shc -vrf task3.sh task3'
                 echo 'Hello Jenkins!' // Prints a message to the console output
             }
         }
