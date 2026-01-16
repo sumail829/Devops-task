@@ -5,7 +5,9 @@ pipeline {
             steps {
                 dir('task3') {
                     sh 'mkdir -p bin'
-                    sh 'shc -vrf task3.sh bin/task3'
+                    sh 'shc -vrf task3.sh'
+                    sh 'mv task3.sh.x bin/task3'
+                    sh 'ls -l bin'
                 }
             }
         }
