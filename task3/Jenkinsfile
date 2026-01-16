@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build task3') {
+            steps {
+                dir('task3') {
+                    sh 'mkdir -p bin'
+                    sh 'shc -vrf task3.sh bin/task3'
+                }
+            }
+        }
+    }
+    post {
+        success {
+            archiveArtifacts artifacts: 'task3/bin/task3'
+        }
+    }
+}
